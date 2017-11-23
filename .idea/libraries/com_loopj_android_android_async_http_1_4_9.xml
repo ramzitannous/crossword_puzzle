@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="com.loopj.android:android-async-http:1.4.9" type="repository">
+    <properties maven-id="com.loopj.android:android-async-http:1.4.9" />
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/loopj/android/android-async-http/1.4.9/android-async-http-1.4.9.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/cz/msebera/android/httpclient/4.3.6/httpclient-4.3.6.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

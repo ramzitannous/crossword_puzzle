@@ -1,0 +1,66 @@
+.button{
+    -fx-background-radius: 30px;
+    -fx-border-radius: 30px;
+    -fx-border-width: 3px;
+    -fx-font-weight: bolder;
+    -fx-font-family: monospace;
+    -fx-text-fill: aliceblue;
+    -fx-text-alignment: center;
+    -fx-border-color: antiquewhite;
+    -fx-font-size: 16px;
+    -fx-alignment: center;
+    -fx-pref-height: 40px;
+}
+.root{
+    -fx-border-width: 4px;
+    /*-fx-border-color: linear-gradient(red,deepskyblue,#00FF00,#247ACC,yellow);*/
+    -fx-background-color: linear-gradient(wheat,#42CCFF);
+    -fx-background-image: url("background.jpg");
+    
+}
+#credits{
+    -fx-alignment: center;
+    -fx-font-size: 16px;
+    -fx-font-family: monospace;
+    -fx-font-weight: bold;
+    -fx-text-fill:white ;
+    -fx-background-color: black;
+}
+
+.myLabel{
+    -fx-alignment: center;
+    -fx-font-size: 20px;
+    -fx-font-family: monospace;
+    -fx-font-weight: bold;
+    -fx-text-fill:#00FF00;
+}
+
+.text-field{
+    -fx-font-weight: bolder;
+    -fx-font-size: 14px;
+    -fx-text-fill: black;
+    -fx-text-alignment: left;
+    -fx-border-radius: 30px;
+    -fx-border-width: 3;
+    -fx-border-color: linear-gradient(red,forestgreen,wheat,yellow);
+    -fx-background-radius: 30px;
+}
+
+.combo-box{
+    -fx-border-radius: 30px;
+    -fx-background-radius: 30;
+    -fx-background-color: mediumspringgreen;
+}
+
+.combo-box .text-field{
+    -fx-text-fill: white;
+    -fx-text-alignment: center;
+}
+
+.back{
+    -fx-background-color: transparent;
+    -fx-pref-width: 64px;
+    -fx-pref-height: 64px;
+    -fx-background-image: url("back-icon.png");
+
+}
