@@ -8,6 +8,8 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.geometry.Pos;
 import javafx.scene.control.*;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 
@@ -27,6 +29,7 @@ public class WordsController implements Initializable{
     @FXML
     private TextField clues;
 
+
     @FXML
     private ComboBox<Crossword.Catagory> topics;
 
@@ -34,6 +37,7 @@ public class WordsController implements Initializable{
     @FXML
     void back() {
         Main.changeScene(Const.menu);
+        Save.saveCrossWords(crosswords);
     }
 
     @FXML
@@ -53,7 +57,6 @@ public class WordsController implements Initializable{
         crossword.setHints(Arrays.asList(cls));
         crossword.setCatagory(catagory);
         crosswords.add(crossword);
-        Save.saveCrossWords(crosswords);
         showWords();
         clearAll();
     }
@@ -62,6 +65,10 @@ public class WordsController implements Initializable{
     public void initialize(URL location, ResourceBundle resources) {
         topics.setItems(FXCollections.observableList(Const.topicsArray));
         crosswords= Save.getCrossWords();
+        Main.stage.setOnHidden(event -> {
+            Save.saveCrossWords(crosswords);
+            System.out.println("closed");
+        });
         showWords();
     }
 
@@ -71,14 +78,18 @@ public class WordsController implements Initializable{
         int count=0;
         VBox vBox=new VBox();
         for(Crossword c:crosswords){
+            Image image = new Image("ui/delete.png");
+            ImageView imageView = new ImageView(image);
             HBox hBox=new HBox();
-            Label label=new Label(c.toString());
+            hBox.setId("myBox");
+            Label label = new Label((count + 1) + ". " + c.toString());
             Button button=new Button();
             int finalCount = count;
+            button.setId("del");
+            button.setGraphic(imageView);
             button.setOnAction(e->{
                 if(crosswords.size()>0) {
                     crosswords.remove(finalCount);
-                    Save.saveCrossWords(crosswords);
                     showWords();
                 }
             });
