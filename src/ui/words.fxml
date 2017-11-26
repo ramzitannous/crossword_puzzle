@@ -17,14 +17,17 @@
             <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="491.0" spacing="10.0">
                <children>
                   <TextField fx:id="word" prefHeight="45.0" prefWidth="148.0" promptText="word" />
-                  <TextField fx:id="clues" prefHeight="48.0" prefWidth="402.0" promptText="hints or clues seperated by /" />
+                  <TextField fx:id="clues" prefHeight="48.0" prefWidth="402.0"
+                             promptText="hints or clues seperated by ,"/>
                </children>
             </HBox>
             <ComboBox fx:id="topics" prefHeight="35.0" prefWidth="171.0" promptText="topic" />
-            <Button mnemonicParsing="false" onAction="#saveWord" prefWidth="131.0" style="-fx-background-color: #FF3300;" text="Save Word" />
+            <Button mnemonicParsing="false" onAction="#saveWord" prefWidth="131.0"
+                    style="-fx-background-color: #FF3300;" styleClass="menu-button" text="Save Word"/>
          </children>
       </VBox>
       <Label layoutX="300.0" layoutY="20.0" style="-fx-text-fill: linear-gradient( #FF7000, #FFD600);" styleClass="myLabel" text="Words And Clues" />
-      <Button layoutX="327.0" layoutY="358.0" mnemonicParsing="false" onAction="#back" prefHeight="35.0" prefWidth="38.0" styleClass="back" text="Button" />
+      <Button layoutX="327.0" layoutY="358.0" mnemonicParsing="false" onAction="#back" prefHeight="35.0"
+              prefWidth="38.0" styleClass="back"/>
    </children>
 </AnchorPane>

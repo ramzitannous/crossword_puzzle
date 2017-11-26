@@ -6,6 +6,7 @@ public class MenuController {
 
 
     public void play() {
+        Main.changeScene(Const.playGui);
 
     }
 
