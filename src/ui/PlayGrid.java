@@ -15,7 +15,7 @@ import java.util.ResourceBundle;
 public class PlayGrid implements Initializable {
     public AnchorPane container;
     private int N = 3, M = 6;
-    private char[][] words = new char[N][M];
+    private Character[][] words = new Character[N][M];
     private GridPane playGrid = new GridPane();
     private int blankNo = 0;
 
@@ -35,6 +35,7 @@ public class PlayGrid implements Initializable {
     void generate() {
         Gentics gentics = new Gentics(words, N, M, blankNo);
         words = gentics.getRandomChromo();
+        gentics.generateSolutions();
         if (words != null) {
             container.getChildren().remove(playGrid);
             populate();
