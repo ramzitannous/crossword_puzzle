@@ -1,0 +1,26 @@
+[
+  {
+    "word": "mouse",
+    "hints": [
+      "eat cats"
+    ],
+    "catagory": "Animal",
+    "len": 5
+  },
+  {
+    "word": "dog",
+    "hints": [
+      "man\u0027s best friend"
+    ],
+    "catagory": "Animal",
+    "len": 3
+  },
+  {
+    "word": "cat",
+    "hints": [
+      "dsads"
+    ],
+    "catagory": "Health",
+    "len": 3
+  }
+]
